@@ -53,6 +53,9 @@ Request Body:
   "status": "Usuario creado con éxito"
 }
 
+{
+  "status": "Usuario ya existe"
+}
 
 
 User Login
@@ -60,10 +63,38 @@ URL: /api/v1/login
 Method: POST
 Request Body:
 
-
+{
+  "username": "jase",
+  "password": "111112"
+}
 
 Get All Users
 URL: /api/v1/usersAll
 Method: GET
 Response:
 Success: 200 OK
+
+
+Response:
+Success: 200 OK
+
+{
+  "access_token": "<access_token>"
+}
+
+Error: 401 Unauthorized
+{
+  "msg": "Credenciales incorrectas"
+}
+
+Get All Users
+URL: /api/v1/usersAll
+Method: GET
+Response:
+Success: 200 OK
+
+[
+  {
+    "_id": "<user_id_1>",
+    "username": "user1"
+    ...
